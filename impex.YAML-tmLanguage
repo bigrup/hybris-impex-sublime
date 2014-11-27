@@ -1,0 +1,21 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: hybrisImPex
+scopeName: source.impex
+fileTypes: [impex]
+uuid: 2eb80721-41c7-46e8-be19-f8333601c9be
+
+patterns: 
+- match: 'INSERT_UPDATE|UPDATE|INSERT|REMOVE'
+  name: keyword.control.impex
+- match: '^#.+$|^$'
+  name: comment.line.impex
+  comment: Comment
+- match: '^;.+$'
+  name: entity.name.function.impex
+  comment: input values
+- match: '^\$.+(?==)'
+  name: constant.character.impex
+  comment: variables
+- match: '\"\#\%'
+  name: variable.parameter.impex
